@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      DivisApp 23002633
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Ingrese un monto en quetzales:</strong>
+    <ion-item>
+      <ion-input [(ngModel)]="quetzales" id="loneinput" placeholder="Ingrese un monto en Quetzales"></ion-input>
+    </ion-item>
+    <ion-button fill="outline" (click)="calcular()">Calcular</ion-button>
+
+    <div *ngIf="resultado !== null">
+      <strong>Total de Divisas:</strong> {{ resultado }}
+    </div>
+  </div>
+</ion-content>
